@@ -1,7 +1,18 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="description" content="My landing page at Wagon workshop (03/03/18).">
 
+    <meta property="og:title" content="My landing page at Wagon workshop (03/03/18)." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://devgirlparis.github.io/landing/" />
+    <meta property="og:image" content="images/le-wagon-2h-landing-1-638.jpg" />
+    <meta property="og:description" content="Travail de la matinee du 3 mars 2018 au workshop du Wagon
+    avec une page web responsive (https://www.slideshare.net/bpapillard/le-wagon-2h-landing).
+    Nous avons etudie HTML, CSS, Bootstrap, google font, font-awesome. Durant cette journée nous avons
+    aussi publié notre travail grâce à GitHub, appris les bases pour préparer le design de son site, 
+    vu l'utilité des API comme celle de Google Maps" />
+     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -21,24 +32,25 @@
       <p>This is the important line everyone reads..</p>
     </div>
 
+
+    <!-- le CSS de class="btn btn-primary" l'emporte sur le CSS de balise a -->
     <p>
-      <a href="#">Start now</a>
+      <a href="#" class="btn btn-primary">Start now</a>
     </p>  
 
-
 <!--     <div class="card">
-     <img src="images/laptop.png" alt="picture description" width="100">
-     <h2>Beautiful</h2>
-     <p>A beautiful app, <strong>very beautiful</strong> app</p>
-    </div> -->
+      <img src="images/New.png" alt="picture description" width="100">
+      <h2>Mine</h2>
+      <p>My app, <strong>very fast</strong> app</p>
+    </div> -->     
 
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-3">
           <div class="card">
-            <img src="images/New.png" alt="picture description" width="100">
-            <h2>Mine</h2>
-            <p class="btn btn-primary">My app, <strong>very fast</strong> app</p>
+            <img src="images/laptop.png" alt="picture description" width="100">
+            <h2>Beautiful</h2>
+            <p>A beautiful app, <strong>very beautiful</strong> app</p>
           </div> 
         </div>
         <div class="col-xs-12 col-sm-6 col-md-3">
@@ -65,13 +77,14 @@
       </div>
     </div>  
 
-    <div id="footer">
+    <!-- le CSS du footer l'emporte sur le CSS de balise a -->
+    <div id="footer"> 
       <p>This is a playground landing ©Le Wagon</p>
       <ul class="list-inline">
-        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fa fa-github"></i></a></li>
+        <li><a href="https://www.youtube.com" target="_blank"><i class="fa fa-youtube"></i></a></li>
+        <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://github.com/" target="_blank"><i class="fa fa-github"></i></a></li>
       </ul>      
     </div>      
       
