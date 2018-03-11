@@ -1,8 +1,27 @@
+<!DOCTYPE html>
 <html>
-  <head>
+  <!-- The first approach for specifying a favicon is to use the rel attribute value "icon" and to define what the value means via a profile -->
+  <head profile="http://www.w3.org/2005/10/profile">
     <meta charset="utf-8">
+
+    <!-- icone affichee dans l onglet -->
+    <link rel="icon" href="images/dgp.ico" />
+    <!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="images/dgp32x32.ico" /><![endif]-->
+
+<!--     <link rel="shortcut icon" href="https://secure.meetupstatic.com/s/img/68780390453345256452178/favicon.ico"> -->
+
+    <!--
+    <link rel="shortcut icon" sizes="196x196" href="images/dgp196x196.png" />
+    <link rel="icon" type="image/png" href="images/dgp96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="images/dgp16x16.png" sizes="16x16">
+    -->
+
+    <link rel="apple-touch-icon" sizes="196x196" href="images/dgp196x196.png">
+
+    <!-- description affichee suite a recherche Google -->
     <meta name="description" content="My landing page at Wagon workshop (03/03/18).">
 
+    <!-- Affichage pour publi FB -->
     <meta property="og:title" content="My landing page at Wagon workshop (03/03/18)." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://devgirlparis.github.io/landing/" />
@@ -76,6 +95,34 @@
         </div>
       </div>
     </div>  
+
+    <div id="googleMap"></div>
+
+
+    <script>
+      function myMap() {
+        var myCenter = new google.maps.LatLng(48.864848,2.379853);
+        var mapCanvas = document.getElementById("googleMap");
+        var mapProp= {
+          center:myCenter,zoom:16,
+        };
+        var map=new google.maps.Map(mapCanvas,mapProp);
+        var marker = new google.maps.Marker({
+          position:myCenter//,
+          //animation: google.maps.Animation.BOUNCE
+        });
+        marker.setMap(map);
+        google.maps.event.addListener(marker,'click',function() {
+          var infowindow = new google.maps.InfoWindow({
+             content:"<b>Le wagon</b><p>16 villa gaudelet 75011 Paris</p>"
+          });
+        infowindow.open(map,marker);
+        });
+      }
+    </script>
+
+    <!-- DO NOT KEEP THE KEY IN APPLICATION TREE -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=APIkeyl=myMap"></script>
 
     <!-- le CSS du footer l'emporte sur le CSS de balise a -->
     <div id="footer"> 

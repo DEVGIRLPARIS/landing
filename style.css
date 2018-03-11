@@ -63,3 +63,15 @@ a:hover {
 #footer a:hover {
   color: white;
 }
+
+#googleMap{
+  width: 80%;
+  height: 400px;
+  color : black;
+
+  /*pr centrer ma div*/
+  display: block;
+  /*margin-left: auto;
+  margin-right: auto;*/
+  margin: auto;
+}
